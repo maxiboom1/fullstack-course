@@ -26,13 +26,7 @@ const character_generator = [ // array of char generators functions
 ]
 
 function passwordGen(){
-    let password = '';
-    let randomIndex;
-    for (let i = 0; i<6;i++){
-        randomIndex = Math.floor(Math.random() * 3)
-        password += character_generator[randomIndex](); // generate random char from character_generator[0-2] and add to password
-    }
-        
+    const password = getRandomPassword();
     return new Promise((resolve,reject) => {
         setTimeout(()=>{
             if(validPassword(password)){
@@ -40,9 +34,18 @@ function passwordGen(){
                 } else {
                 reject('Failed to pass filter, generate again (' + password + ')');
                 }
-        },1000)
-        
+        },1000)     
     })
+}
+
+function getRandomPassword(){
+    let password = '';
+    let randomIndex;
+    for (let i = 0; i<6;i++){
+        randomIndex = Math.floor(Math.random() * 3)
+        password += character_generator[randomIndex](); // generate random char from character_generator[0-2] and add to password
+    }
+    return password;     
 }
 
 function validPassword(password){
