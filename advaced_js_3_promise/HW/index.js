@@ -37,7 +37,6 @@ function passwordGen(){
     })
 }
 
-
 function getRandomPassword(){
     let password = '';
     let randomIndex;
@@ -49,18 +48,7 @@ function getRandomPassword(){
 }
 
 function validPassword(password){
-    const filter = []; // we will fill it with 'numbers', 'small_letters','capital_letters'   
-    for (const char of password){
-        let charCode = char.charCodeAt(0)   
-        if( charCode<58 && !filter.includes('numbers')){ 
-            filter.push('numbers');
-        }else if( 64<charCode && charCode<91 && !filter.includes('capital_letters')){
-            filter.push('capital_letters');
-        }else if(96<charCode && charCode<123 && !filter.includes('small_letters')){ 
-            filter.push('small_letters');
-        }
-    }
-    if (filter.length ==3 ){return true} else {return false}  
+    return (/[0-9]/.test(password) && /[a-z]/.test(password) && /[A-Z]/.test(password))
 }    
 
 passwordGen()
