@@ -7,7 +7,6 @@ function clickHandler(){
 }
 
 function generate7BoomAfterDelayAsync(min,max){
-    console.log(min, max)
     const random = Math.floor(Math.random()*(max-min) + min);
     return new Promise((resolve,reject) => {
         setTimeout(()=>{
