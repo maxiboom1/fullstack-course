@@ -38,6 +38,7 @@ function passwordGen(){
     })
 }
 
+
 function getRandomPassword(){
     let password = '';
     let randomIndex;
