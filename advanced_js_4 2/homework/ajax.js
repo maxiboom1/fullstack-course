@@ -7,6 +7,7 @@ async function clickHandler(){
         const user = await getUser(id);
         const userDiv = createUserDiv(JSON.parse(user),id);
         render(userDiv);
+        exercise2(); 
     }catch(e){
         console.log(e)
     }
@@ -52,4 +53,21 @@ function createUserDiv(user,id){
 function render(userDiv){
     document.querySelector('.user_card').innerHTML = '';
     document.querySelector('.user_card').appendChild(userDiv);
+}
+
+
+//EX-2
+// This function parses the persons array and prints name,username,email,and address.city to console (class exercise). 
+function exercise2(){
+   
+    const ajax = new XMLHttpRequest();
+    ajax.onload =() => {
+       let persons = JSON.parse(ajax.responseText);
+       for(const person of persons){
+        console.log(person.name, person.username, person.email, person.address.city); // now you should render it in table... 
+       }        
+    }
+    ajax.open('GET','https://jsonplaceholder.typicode.com/users');
+    ajax.send();
+    
 }
