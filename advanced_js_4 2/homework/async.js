@@ -1,7 +1,6 @@
 // EX-1
 const colors = ['red','blue','green','white','grey','black',];
 document.getElementById('btn_color').addEventListener('click',clickHandler);
-document.getElementById('btn_geolocation').addEventListener('click',clickHandler2);
 async function clickHandler(){
     try{
         const color = await getRandomColorAfterDelayAsync();
@@ -29,6 +28,7 @@ function getRandomColor(){
 }
 
 // EX-2
+document.getElementById('btn_geolocation').addEventListener('click',clickHandler2);
 
 async function clickHandler2(){
     try{
