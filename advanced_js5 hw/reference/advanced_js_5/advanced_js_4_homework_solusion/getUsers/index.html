@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users table</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <h1 class="text-center mb-4">Users</h1>
+    <button class="btn btn-outline-secondary" onclick="renderUsers()">
+      Get Users
+    </button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">User Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">City</th>
+        </tr>
+      </thead>
+      <tbody id="root">
+        
+      </tbody>
+    </table>
+    <script src="index.js"></script>
+  </body>
+</html>
