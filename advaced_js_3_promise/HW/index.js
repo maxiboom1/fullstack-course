@@ -21,7 +21,7 @@ function generate7BoomAfterDelayAsync(min,max){
 const character_generator = [ // array of char generators functions
     function(){return String.fromCharCode( 48 + Math.floor(Math.random()*10))},  // ASCII code 48-57 is 0-9 numbers
     function(){return String.fromCharCode( 65 + Math.floor(Math.random()*26))},  // ASCII code 65-90 is A-Z 
-    function(){return String.fromCharCode( 97 + Math.floor(Math.random()*26))},   // ASCII code 97-122 is a-z
+    function(){return String.fromCharCode( 97 + Math.floor(Math.random()*26))},  // ASCII code 97-122 is a-z
 ]
 
 function passwordGen(){
