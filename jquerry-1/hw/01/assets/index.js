@@ -1,43 +1,12 @@
 $(document).ready(function(){
 
-    $('.btn1').click(handleClick1);  
+    $('.btn1, .btn2').click(handleClick);  
     
-    function handleClick1(val){
-        console.log(val)
-        $('.target1').html($('.input1').val());
-        $('.input1').hide();
+    function handleClick(event){
+        const index = event.currentTarget.className.slice(-1); // fetchs the classname (btn1 or btn2 and sclices  last char (1 or 2))
+        $('.target' + index).html($('.input' + index).val());
+        $('.input' + index).hide();
     }
-  
-    $('.btn2').click(handleClick2);  
-    
-    function handleClick2(){
-        $('.target2').html($('.input2').val());
-        $('.input2').hide();
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
 
