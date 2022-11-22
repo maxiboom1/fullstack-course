@@ -1,0 +1,19 @@
+section div{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    font-size: x-large;
+    text-align: center;
+    line-height: 100px;
+    border: solid 1px black;
+    margin: 5px;
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+.blue{
+    background-color: blue;
+    color: white;
+}
